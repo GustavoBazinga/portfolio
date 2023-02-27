@@ -1,0 +1,66 @@
+/* Estilos gerais para a barra de navegação */
+nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* Estilos para o ícone à esquerda */
+  nav .icon {
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para o menu à direita */
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  /* Estilos para tornar a barra de navegação responsiva */
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      padding: 10px;
+    }
+  
+    nav ul li {
+      margin: 10px 0;
+    }
+  
+    nav .icon {
+      display: block;
+    }
+    
+    /* Mostra o menu quando o ícone é clicado */
+    nav.active ul {
+      display: flex;
+    }
+  }
+  
